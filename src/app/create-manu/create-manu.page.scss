@@ -1,0 +1,44 @@
+.customer-font {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kanit';
+    font-size: 18px;
+}
+
+ion-header {
+    --background: rgba(237, 242, 245, .8);
+  
+    .back-blob {
+      z-index: -1;
+      width: 600px;
+      position: absolute;
+      left: -50%;
+      top: 0;
+    }
+    ion-toolbar {
+        font-family: Kanit;
+        font-size: 18px;
+        --background: transparent;
+      }
+}
+.create {
+    background: transparent;
+    font-family: Kanit;
+    font-size: 18px;
+}
+.create1 {
+    background: transparent;
+    font-family: Kanit;
+    font-size: 16px;
+}
+.form-create {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Kanit;
+    font-size: 16px;
+    line-height: 1.2;
+    border: none;
+    outline: none;
+    padding: 0 20px 0 23px; 
+}
+   

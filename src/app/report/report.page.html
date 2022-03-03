@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="customer-font">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>สรุปยอดขายรายวัน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-font">
+  <ion-label> สรุปยอดขายรายวัน </ion-label>
+  <ion-item class="custom-font">
+    <ion-label class="custom-font"> เลือกวันที่ </ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="myDate" placeholder="Select Date" (ionChange)="SaveDete()" class="custom-font">
+    </ion-datetime>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label class="custom-font"> ชื่ออาหาร </ion-label>
+    <ion-label class="custom-font"> จำนวน </ion-label>
+    <ion-label class="custom-font"> ราคารวม </ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let item of data.listdata">
+      <ion-label class="custom-font"> {{item.namemenu}} </ion-label>
+      <ion-label class="custom-font"> {{item.tatol}} </ion-label>
+      <ion-label class="custom-font"> {{item.price}} </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-label class="custom-font"> รวมยอดขาย {{data.result}} </ion-label>
+</ion-content>

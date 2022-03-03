@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar class="customer-font">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>เมนู</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-item>
+  <ion-label class="menu">เลือกหมวดเมนู</ion-label>
+  <ion-select interface="popover" [(ngModel)]="option" (ionChange)="GetMenuOption()" class="customer-font">
+    <ion-select-option class="menu" value="allmenu">เมนูทั้งหมด</ion-select-option>
+    <ion-select-option class="menu" value="อาหาร">อาหาร</ion-select-option>
+    <ion-select-option class="menu" value="เครื่องดื่ม">เครื่องดื่ม</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-content>
+  <ion-item *ngFor="let item of data" [routerLink]="['/food-orderus/', item.id]" routerDirection="forward">
+    <ion-label class="menu"> {{item.name}}</ion-label>
+    <ion-label class="menu"> {{item.price}}</ion-label>
+  </ion-item>  
+  <p></p>
+  <ion-button shape="round" class="form-menu  customer-font" [routerLink]="['/basket/', tabel]" routerDirection="forward">ตะกร้า</ion-button>
+  <ion-button shape="round" class="form-menu  customer-font" [routerLink]="['/historyorderuse/']" routerDirection="forward">รายการที่สั่งก่อนหน้า</ion-button>
+</ion-content>
+

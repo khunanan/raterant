@@ -1,0 +1,57 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+<ion-app>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar color="#d9d9d9">
+        <ion-title> เมนู </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="class=" ion-padding>
+        <form class="ion-padding">
+          <ion-list>
+            <ion-menu-toggle>
+              <ion-item routerLink="admin">
+                <ion-icon name="home" slot="start"></ion-icon>
+                <ion-label class="list"> หน้าแรก </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <ion-item routerLink="listmanuad">
+                <ion-icon name="clipboard" slot="start"></ion-icon>
+                <ion-label class="list"> จัดการออเดอร์ </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <ion-item routerLink="order-ready">
+                <ion-icon name="fast-food" slot="start"></ion-icon>
+                <ion-label class="list"> รายการที่พร้อมเสิร์ฟ </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <ion-item routerLink="order-history">
+                <ion-icon name="wallet" slot="start"></ion-icon>
+                <ion-label class="list"> เคาน์เตอร์ </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <ion-item routerLink="manuad">
+                <ion-icon name="create" slot="start"></ion-icon>
+                <ion-label class="list"> จัดการข้อมูลเมนูรายการอาหาร </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <ion-item routerLink="report">
+                <ion-icon name="stats-chart" slot="start"></ion-icon>
+                <ion-label class="list"> สรุปยอดขายรายวัน </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </form>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

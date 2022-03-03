@@ -1,0 +1,43 @@
+.my-custom-class {
+    --background: #ec2020;
+  }
+
+  /* DOES NOT WORK - not specific enough */
+.action-sheet-group {
+    background: #ad0a0a;
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class .action-sheet-group {
+    background: #1a0ce4;
+  }
+.customer-font {
+  font-family: 'Josefin Sans', sans-serif ;
+  font-family: 'Kanit';
+  font-size: 18px;
+}
+ion-header {
+      ion-toolbar {
+        font-family: Kanit;
+        --background: transparent;
+      }
+}
+ion-select-option {
+  font-family: 'Josefin Sans', sans-serif ;
+  font-family: 'Kanit';
+  font-size: 18px;
+}
+ion-content {
+    .type {
+      display: block;
+      width: 100%;
+      background: transparent;
+      font-family: Kanit;
+      font-size: 18px;
+      line-height: 1.2;
+      border: none;
+      outline: none;
+      padding: 0 20px 0 23px; 
+    }
+
+}

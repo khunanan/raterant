@@ -1,0 +1,30 @@
+<!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet"> -->
+<ion-header>
+  <ion-toolbar class="customer-font">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>รายละเอียดเมนู</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img class="image" src={{data.image}}  alt="">
+    <ion-card-header>   
+    <ion-label class="orders"> {{data.name}}</ion-label>
+    <ion-label class="orders"> {{data.price}}</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="orders"> total (จำนวน) </ion-label>
+      <ion-input class="orders" placeholder="ป้อนข้อมูล" type="number" min="0" [(ngModel)]="tatol">  </ion-input>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-label class="orders"> Description (คำอธิบาย) </ion-label>
+    <ion-input class="orders" placeholder="ป้อนข้อมูล" [(ngModel)]="description"></ion-input>
+    </ion-card-content>
+    <ion-button class="form-orders customer-font" shape="round" expand="block" (click)="AddtoCart()" routerDirection="back">เพิ่มในตะกร้า</ion-button> <br>
+  </ion-card> 
+
+</ion-content>

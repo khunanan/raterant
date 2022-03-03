@@ -1,0 +1,37 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="ion-text-center customer-font">
+      <ion-title>
+        Restaurants
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides *ngIf="ImageArray && ImageArray.length" autoplay="5000" loop="true" speed="3000" class="slides"
+    pager="true">
+    <ion-slide *ngFor="let image of ImageArray">
+      <img src="{{image.image}}" />
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-content>
+  <div>
+    <ion-col>
+      <div id="header" class="ion-text-center customer-font">
+        <!-- <img src="assets/icon/favicon.png" />  -->
+        <form id="form">
+          <h1>กรอกหมายเลขโต๊ะ</h1>
+        </form>
+        <br>
+        <ion-input shape="round" placeholder="No. Table" [(ngModel)]="tabelNo"></ion-input>
+        <ion-button shape="round" size="meduim" color="tertiary" (click)="LoginTable()">สั่งอาหาร </ion-button>
+      </div>
+    </ion-col>
+  </div>
+</ion-content>

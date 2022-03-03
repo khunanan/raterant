@@ -1,0 +1,21 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>รายการที่พร้อมเสิร์ฟ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p></p>
+  <ion-label class="his" class="customer-font"> ประวัติการสั่ง </ion-label>
+  <ion-list *ngFor="let item of data">
+    <ion-item class="customer-font" [routerLink]="['/conferim-order/', item.id]" routerDirection="forward">
+      <ion-label class="his" class="customer-font">โต๊ะที่ {{ item.nameTable }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

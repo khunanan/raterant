@@ -1,0 +1,39 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/manuad"></ion-back-button>
+    </ion-buttons>
+    <ion-title>แก้ไขเมนู</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label floating class="customer-font">เลือกรูป</ion-label>
+    <ion-input class="customer-font" type="file" (change)="handleFileSelect($event)" [(ngModel)]="base64textString" class="customer-font"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="edit"> รูปภาพ </ion-label>
+    <img class="image" src="{{data.image}}"  alt="">
+  </ion-item>
+  <ion-item>
+    <ion-label class="edit" > ชื่อเมนู </ion-label>
+    <ion-input class="edit1" placeholder="ป้อนข้อมูล" [(ngModel)]="data.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="edit"> ราคา </ion-label>
+    <ion-input class="edit1"  placeholder="ป้อนข้อมูล" [(ngModel)]="data.price"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="edit"> ประเภท </ion-label>
+    <ion-input class="edit1" placeholder="ป้อนข้อมูล" [(ngModel)]="data.catagory"></ion-input>
+  </ion-item>
+  <p></p>
+  <p></p> <br>
+  <ion-button class="form-edit customer-font" shape="round" expand="block" (click)="EditMenu()" routerDirection="back">แก้ไขเมนู</ion-button>
+  <p></p>
+  <ion-button  color="danger" class="form-edit customer-font" shape="round" expand="block" (click)="DeleteMenu()" routerDirection="back">ลบเมนู</ion-button>
+</ion-content>

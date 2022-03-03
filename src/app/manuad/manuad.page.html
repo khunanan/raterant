@@ -1,0 +1,31 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar class="customer-font" color="#d9d9d9">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>จัดการข้อมูลเมนูรายการอาหาร</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label class="type">หมวดเมนู</ion-label>
+    <ion-select class="customer-font" interface="popover" class="customer-font" [(ngModel)]="option" (ionChange)="GetMenuOption()">
+      <ion-select-option  value="allmenu">เมนูทั้งหมด</ion-select-option>
+      <ion-select-option  value="อาหาร">อาหาร</ion-select-option>
+      <ion-select-option  value="เครื่องดื่ม">เครื่องดื่ม</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngFor="let item of data" [routerLink]="['/edit-manu/', item.id]" routerDirection="forward">
+    <!-- <ion-label>{{item.image}} </ion-label> -->
+    <ion-label class="type"> {{item.name}}</ion-label>
+    <ion-label class="type"> {{item.price}}</ion-label>
+  </ion-item>
+  <p></p>
+  <ion-button class="type" shape="round"  (click)="OpenCreateMenu()">เพิ่มเมนูใหม่</ion-button>
+
+</ion-content>

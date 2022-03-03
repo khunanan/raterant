@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/order-ready"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ยืนยันการเสิร์ฟ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p></p>
+  <ion-label class="food-oderad-up customer-font">รายการที่สั่ง โต๊ะ </ion-label>
+  <ion-label class="food-oderad customer-font">{{ data.nameTable }}</ion-label>
+  <ion-list *ngFor="let item of data.listmanu">
+    <ion-item>
+      <ion-label class="food-oderad customer-font">{{ item.nameManu.name }}</ion-label>
+      <ion-label class="food-oderad customer-font">{{ item.tatol }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <p></p>
+  <ion-button class="form-food-oderad customer-font" shape="round" expand="block" (click)="UpdeteStatus()" routerDirection="back">
+    เสิร์ฟแล้ว</ion-button>
+</ion-content>

@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar class="customer-font">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>แก้ไขเมนูที่สั่ง</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-label class="user-edit"></ion-label>
+    <ion-card-header>   
+      <ion-img src={{data.nameManu?.image}} ></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="user-edit"> total (จำนวน) </ion-label>
+      <ion-input  class="customer-font" type="number" min="0" [(ngModel)]="data.tatol">  </ion-input>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-label class="user-edit"> คำอธิบาย </ion-label>
+    <ion-input class="customer-font" placeholder="ป้อนข้อมูล" [(ngModel)]="data.description"></ion-input>
+    </ion-card-content>
+    <ion-button class="form-user-edit customer-font" shape="round" expand="block" (click)="EditMenu()" routerDirection="back">ยืนยันการแก้ไข</ion-button> <p></p>
+  </ion-card> 
+
+</ion-content>
